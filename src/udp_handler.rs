@@ -19,12 +19,4 @@ impl UdpHandler {
         let (amt, _src) = self.socket.recv_from(&mut buf)?;
         Ok(String::from_utf8_lossy(&buf[..amt]).to_string())
     }
-
-    // pub fn set_server_addr(&mut self, addr: String) {
-    //     self.server_addr = addr;
-    // }
-
-    // pub fn send_msg(&mut self, msg: String) {
-    //     self.socket.send_to(msg.as_bytes(), &self.server_addr);
-    // }
 }
